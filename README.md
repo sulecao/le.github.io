@@ -1,2 +1,2 @@
 # le.github.io
-blog
+~blog
