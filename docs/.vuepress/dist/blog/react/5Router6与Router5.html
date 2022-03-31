@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Router6 | 曹乐乐的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="曹乐乐的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.87056b20.css" as="style"><link rel="preload" href="/assets/js/app.c5540360.js" as="script"><link rel="preload" href="/assets/js/2.8cedc627.js" as="script"><link rel="preload" href="/assets/js/12.63aa1da4.js" as="script"><link rel="prefetch" href="/assets/js/10.6afd72ff.js"><link rel="prefetch" href="/assets/js/11.dcbc2078.js"><link rel="prefetch" href="/assets/js/13.f6eba4b3.js"><link rel="prefetch" href="/assets/js/14.2eab2fda.js"><link rel="prefetch" href="/assets/js/15.59ddd13e.js"><link rel="prefetch" href="/assets/js/16.e5720ea3.js"><link rel="prefetch" href="/assets/js/17.7dd9c057.js"><link rel="prefetch" href="/assets/js/18.250128a4.js"><link rel="prefetch" href="/assets/js/19.a7ed35f1.js"><link rel="prefetch" href="/assets/js/20.996fc976.js"><link rel="prefetch" href="/assets/js/3.0a51d753.js"><link rel="prefetch" href="/assets/js/4.a81c7b14.js"><link rel="prefetch" href="/assets/js/5.091ef1c6.js"><link rel="prefetch" href="/assets/js/6.6b7608b9.js"><link rel="prefetch" href="/assets/js/7.3313c665.js"><link rel="prefetch" href="/assets/js/8.6588b199.js"><link rel="prefetch" href="/assets/js/9.bc1a53ba.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.87056b20.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">曹乐乐的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react/1基础.html" class="sidebar-link">基础</a></li><li><a href="/blog/react/2类组件.html" class="sidebar-link">类组件</a></li><li><a href="/blog/react/3函数组件.html" class="sidebar-link">函数组件</a></li><li><a href="/blog/react/4Redux.html" class="sidebar-link">Redux</a></li><li><a href="/blog/react/5Router6与Router5.html" class="active sidebar-link">Router6与Router5</a></li><li><a href="/blog/react/6React路由拦截.html" class="sidebar-link">React路由拦截</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React实现</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react实现/1redux实现.html" class="sidebar-link">redux</a></li><li><a href="/blog/react实现/2react-redux实现.html" class="sidebar-link">react-redux</a></li><li><a href="/blog/react实现/3VDOM简单实现.html" class="sidebar-link">VDOM</a></li><li><a href="/blog/react实现/4React的fiber简单实现.html" class="sidebar-link">fiber</a></li><li><a href="/blog/react实现/5React的hook之useState简单实现.html" class="sidebar-link">hook之useState</a></li><li><a href="/blog/react实现/6React的diff算法与渲染简单实现.html" class="sidebar-link">diff算法与渲染</a></li><li><a href="/blog/react实现/7React的scheduler介绍与简单实现.html" class="sidebar-link">scheduler</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="router6"><a href="#router6" class="header-anchor">#</a> Router6</h2> <p>官网：<a href="https://reactrouter.com/" target="_blank" rel="noopener noreferrer">https://reactrouter.com/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>安装</p> <div class="language- extra-class"><pre class="language-text"><code>npm i -S react-router-dom
+</code></pre></div><h4 id="demo-router5写法见下半部分"><a href="#demo-router5写法见下半部分" class="header-anchor">#</a> demo(router5写法见下半部分)</h4> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token comment">//index.js</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  BrowserRouter<span class="token punctuation">,</span>
+  Routes<span class="token punctuation">,</span>
+  Route<span class="token punctuation">,</span>
+  useNavigate
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Expenses <span class="token keyword">from</span> <span class="token string">&quot;./routes/expenses&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Invoices <span class="token keyword">from</span> <span class="token string">&quot;./routes/invoices&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Invoice <span class="token keyword">from</span> <span class="token string">&quot;./routes/invoice&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> router6 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">//class组件没有支持编程式导航的方法，可以在最外围用hooks组件包裹一下，并保存navigate</span>
+<span class="token comment">//另一个方案见expenses文件</span>
+<span class="token keyword">function</span> <span class="token function">AppRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> navigate <span class="token operator">=</span> <span class="token function">useNavigate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    router6<span class="token punctuation">.</span>navigate <span class="token operator">=</span> navigate
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Routes</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span> <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>expenses<span class="token punctuation">&quot;</span></span> <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Expenses</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>invoices<span class="token punctuation">&quot;</span></span> <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Invoices</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span> <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token punctuation">{</span><span class="token comment">/* 默认路由 */</span><span class="token punctuation">}</span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span>
+            <span class="token attr-name">index</span>
+            <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Select an invoice</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">}</span></span>
+          <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+          </span><span class="token punctuation">{</span><span class="token comment">/* 嵌套子路由 */</span><span class="token punctuation">}</span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>:invoiceId<span class="token punctuation">&quot;</span></span> <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Invoice</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Route</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span>
+          <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>*<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">element</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+              </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">There's nothing here!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+          <span class="token punctuation">}</span></span>
+        <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Route</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Routes</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">BrowserRouter</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">AppRoutes</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">BrowserRouter</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> router6
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token comment">//App.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Outlet<span class="token punctuation">,</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Bookkeeper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span>
+        <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          borderBottom<span class="token operator">:</span> <span class="token string">&quot;solid 1px&quot;</span><span class="token punctuation">,</span>
+          paddingBottom<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span><span class="token comment">/* link组件，导航 */</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/invoices<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Invoices</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"> |</span><span class="token punctuation">{</span><span class="token string">&quot; &quot;</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/expenses<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Expenses</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token comment">/* Outlet组件用来展示匹配到的路由对应的element */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Outlet</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>invoices<span class="token punctuation">.</span>jsx
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NavLink<span class="token punctuation">,</span> Outlet<span class="token punctuation">,</span> useSearchParams<span class="token punctuation">,</span> useLocation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getInvoices<span class="token punctuation">,</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../data&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Invoices</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> invoices <span class="token operator">=</span> <span class="token function">getInvoices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 获取和设置SearchParams</span>
+    <span class="token keyword">let</span> <span class="token punctuation">[</span>searchParams<span class="token punctuation">,</span> setSearchParams<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> display<span class="token operator">:</span> <span class="token string">&quot;flex&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span>
+                <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+                    borderRight<span class="token operator">:</span> <span class="token string">&quot;solid 1px&quot;</span><span class="token punctuation">,</span>
+                    padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+            <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                &lt;input
+                    value=</span><span class="token punctuation">{</span>searchParams<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;filter&quot;</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span><span class="token plain-text">
+                    onChange=</span><span class="token punctuation">{</span>event <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">let</span> filter <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>filter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token function">setSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            <span class="token function">setSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token plain-text">
+                /&gt;
+                </span><span class="token punctuation">{</span>invoices
+                    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>invoice <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">let</span> filter <span class="token operator">=</span> searchParams<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;filter&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>filter<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                        <span class="token keyword">let</span> name <span class="token operator">=</span> invoice<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">return</span> name<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>filter<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>invoice <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+                        <span class="token comment">// 有激活样式的link</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NavLink</span></span>
+                            <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> isActive <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                display<span class="token operator">:</span> <span class="token string">&quot;block&quot;</span><span class="token punctuation">,</span>
+                                margin<span class="token operator">:</span> <span class="token string">&quot;1rem 0&quot;</span><span class="token punctuation">,</span>
+                                color<span class="token operator">:</span> isActive <span class="token operator">?</span> <span class="token string">&quot;red&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+                            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+                            <span class="token attr-name">to</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/invoices/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span></span>
+                            <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">}</span></span>
+                        <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">NavLink</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Outlet</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//可以用他来替换NavLink，实现跳转后保存输入框里的过滤条件</span>
+<span class="token comment">// function QueryNavLink({ to, ...props }) {</span>
+<span class="token comment">//     let location = useLocation();</span>
+<span class="token comment">//     return &lt;NavLink to={to + location.search} {...props} /&gt;;</span>
+<span class="token comment">// }</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>invoice<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useParams<span class="token punctuation">,</span>useNavigate  <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getInvoice<span class="token punctuation">,</span> deleteInvoice<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../data&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Invoice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// hooks里的编程式路由导航</span>
+  <span class="token keyword">let</span> navigate <span class="token operator">=</span> <span class="token function">useNavigate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> params <span class="token operator">=</span> <span class="token function">useParams</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> invoice <span class="token operator">=</span> <span class="token function">getInvoice</span><span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>invoiceId<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//{invoiceId: &quot;2000&quot;}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Total Due: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>amount<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token plain-text">: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Due Date: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>due<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+          <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">deleteInvoice</span><span class="token punctuation">(</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">&quot;/invoices&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          Delete
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>expenses<span class="token punctuation">.</span>jsx
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token comment">//另一种类组件编程式导航 设置一个state改变Navigate显隐，Navigate渲染时会自动跳转。</span>
+<span class="token comment">// import { Navigate } from &quot;react-router-dom&quot;;</span>
+<span class="token comment">// class Expenses extends Component {</span>
+<span class="token comment">//   state = {</span>
+<span class="token comment">//     user: null,</span>
+<span class="token comment">//   }</span>
+<span class="token comment">//   render() {</span>
+<span class="token comment">//     return (</span>
+<span class="token comment">//       &lt;main style={{ padding: &quot;1rem 0&quot; }}&gt;</span>
+<span class="token comment">//         {this.state.user &amp;&amp; (</span>
+<span class="token comment">//           &lt;Navigate to='/invoices' replace='true' /&gt;</span>
+<span class="token comment">//         )}</span>
+<span class="token comment">//         &lt;h2&gt;Expenses&lt;/h2&gt;</span>
+<span class="token comment">//         &lt;p&gt;</span>
+<span class="token comment">//           &lt;button</span>
+<span class="token comment">//             onClick={() =&gt; {</span>
+<span class="token comment">//               this.setState({</span>
+<span class="token comment">//                 user:true</span>
+<span class="token comment">//               })</span>
+<span class="token comment">//             }}</span>
+<span class="token comment">//           &gt;</span>
+<span class="token comment">//             toInvoices</span>
+<span class="token comment">//           &lt;/button&gt;</span>
+<span class="token comment">//         &lt;/p&gt;</span>
+<span class="token comment">//       &lt;/main&gt;</span>
+<span class="token comment">//     );</span>
+<span class="token comment">//   }</span>
+<span class="token comment">// }</span>
+
+<span class="token comment">// export default Expenses</span>
+
+<span class="token keyword">import</span> router6 <span class="token keyword">from</span> <span class="token string">'../index'</span>
+<span class="token keyword">class</span> <span class="token class-name">Expenses</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem 0&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Expenses</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+            <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">;</span>
+              router6<span class="token punctuation">.</span><span class="token function">navigate</span><span class="token punctuation">(</span><span class="token string">&quot;/invoices&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+          <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            toInvoices
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Expenses
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">.</span><span class="token operator">/</span>data<span class="token punctuation">.</span>js 静态数据
+<span class="token keyword">let</span> invoices <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Santa Monica&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">1995</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">amount</span><span class="token operator">:</span> <span class="token string">&quot;$10,800&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">due</span><span class="token operator">:</span> <span class="token string">&quot;12/05/1995&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Stankonia&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">amount</span><span class="token operator">:</span> <span class="token string">&quot;$8,000&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">due</span><span class="token operator">:</span> <span class="token string">&quot;10/31/2000&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Ocean Avenue&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">2003</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">amount</span><span class="token operator">:</span> <span class="token string">&quot;$9,500&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">due</span><span class="token operator">:</span> <span class="token string">&quot;07/22/2003&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Tubthumper&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">1997</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">amount</span><span class="token operator">:</span> <span class="token string">&quot;$14,000&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">due</span><span class="token operator">:</span> <span class="token string">&quot;09/01/1997&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&quot;Wide Open Spaces&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">number</span><span class="token operator">:</span> <span class="token number">1998</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">amount</span><span class="token operator">:</span> <span class="token string">&quot;$4,600&quot;</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">due</span><span class="token operator">:</span> <span class="token string">&quot;01/27/2998&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getInvoices</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> invoices<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getInvoice</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> invoices<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>
+      <span class="token parameter">invoice</span> <span class="token operator">=&gt;</span> invoice<span class="token punctuation">.</span>number <span class="token operator">===</span> number
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">deleteInvoice</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    invoices <span class="token operator">=</span> invoices<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>
+      <span class="token parameter">invoice</span> <span class="token operator">=&gt;</span> invoice<span class="token punctuation">.</span>number <span class="token operator">!==</span> number
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="router5"><a href="#router5" class="header-anchor">#</a> Router5</h2> <p>安装</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i -S react-router-dom@5
+</code></pre></div><h4 id="demo-实现了和router6一样的功能"><a href="#demo-实现了和router6一样的功能" class="header-anchor">#</a> demo(实现了和router6一样的功能)</h4> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>index<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  BrowserRouter<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">BrowserRouter</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">BrowserRouter</span></span> <span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>App<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Switch<span class="token punctuation">,</span> Route<span class="token punctuation">,</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Expenses <span class="token keyword">from</span> <span class="token string">&quot;./routes/expenses&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Invoices <span class="token keyword">from</span> <span class="token string">&quot;./routes/invoices&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Bookkeeper</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span>
+        <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          borderBottom<span class="token operator">:</span> <span class="token string">&quot;solid 1px&quot;</span><span class="token punctuation">,</span>
+          paddingBottom<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+      <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span><span class="token comment">/* link组件，导航 */</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/invoices<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Invoices</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"> |</span><span class="token punctuation">{</span><span class="token string">&quot; &quot;</span><span class="token punctuation">}</span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Link</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/expenses<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Expenses</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Link</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token comment">/* 路由匹配的组件显示位置 */</span><span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Switch</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/invoices<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Invoices</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Route</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/expenses<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Expenses</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Route</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Switch</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>invoices<span class="token punctuation">.</span>jsx
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NavLink<span class="token punctuation">,</span> Route <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getInvoices<span class="token punctuation">,</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../data&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Invoice <span class="token keyword">from</span> <span class="token string">&quot;./invoice&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Invoices</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> invoices <span class="token operator">=</span> <span class="token function">getInvoices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>searchParams<span class="token punctuation">,</span> setSearchParams<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> display<span class="token operator">:</span> <span class="token string">&quot;flex&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span>
+                <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+                    borderRight<span class="token operator">:</span> <span class="token string">&quot;solid 1px&quot;</span><span class="token punctuation">,</span>
+                    padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+            <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+                    <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>searchParams<span class="token punctuation">}</span></span>
+                    <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>event <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">let</span> filter <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>filter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token function">setSearchParams</span><span class="token punctuation">(</span>filter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            <span class="token function">setSearchParams</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+                <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                </span><span class="token punctuation">{</span>invoices
+                    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>invoice <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>searchParams<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                        <span class="token keyword">let</span> name <span class="token operator">=</span> invoice<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">return</span> name<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>searchParams<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>invoice <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+                        <span class="token comment">// 有激活样式的link</span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">NavLink</span></span>
+                            <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>isActive <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                display<span class="token operator">:</span> <span class="token string">&quot;block&quot;</span><span class="token punctuation">,</span>
+                                margin<span class="token operator">:</span> <span class="token string">&quot;1rem 0&quot;</span><span class="token punctuation">,</span>
+                                color<span class="token operator">:</span> isActive <span class="token operator">?</span> <span class="token string">&quot;red&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+                            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+                            <span class="token attr-name">to</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/invoices/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span></span>
+                            <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">}</span></span>
+                        <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                            </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token plain-text">
+                        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">NavLink</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token punctuation">{</span><span class="token comment">/* 动态路由参数后面加个？表示可选的 */</span><span class="token punctuation">}</span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Route</span></span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/invoices/:invoiceId?<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Invoice</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Route</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>invoice<span class="token punctuation">.</span>js
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useParams<span class="token punctuation">,</span> useHistory <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getInvoice<span class="token punctuation">,</span> deleteInvoice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../data&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Invoice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// hooks里的编程式路由导航</span>
+  <span class="token keyword">let</span> history <span class="token operator">=</span> <span class="token function">useHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> params <span class="token operator">=</span> <span class="token function">useParams</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> invoice <span class="token operator">=</span> <span class="token function">getInvoice</span><span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span>invoiceId<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Invoice'</span><span class="token punctuation">,</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//{invoiceId: &quot;2000&quot;}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token punctuation">{</span><span class="token operator">!</span>params<span class="token punctuation">.</span>invoiceId <span class="token operator">&amp;&amp;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Select an invoice</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">}</span><span class="token plain-text">
+      </span><span class="token punctuation">{</span>params<span class="token punctuation">.</span>invoiceId <span class="token operator">&amp;&amp;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Total Due: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>amount<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token plain-text">: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">}</span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Due Date: </span><span class="token punctuation">{</span>invoice<span class="token punctuation">.</span>due<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+              <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token function">deleteInvoice</span><span class="token punctuation">(</span>invoice<span class="token punctuation">.</span><span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;/invoices&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+            <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+              Delete
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span><span class="token operator">/</span>routes<span class="token operator">/</span>expenses<span class="token punctuation">.</span>jsx
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> withRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react-router-dom&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">//类组件可以用withRouter包裹一下，props上会有路由方法</span>
+<span class="token keyword">class</span> <span class="token class-name">Expenses</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">&quot;1rem 0&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Expenses</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span>
+            <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>history<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&quot;/invoices&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+          <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            to-Invoices
+          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withRouter</span><span class="token punctuation">(</span>Expenses<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>./data.js
+同Router6文件</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/react/4Redux.html" class="prev">
+        Redux
+      </a></span> <span class="next"><a href="/blog/react/6React路由拦截.html">
+        React路由拦截
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c5540360.js" defer></script><script src="/assets/js/2.8cedc627.js" defer></script><script src="/assets/js/12.63aa1da4.js" defer></script>
+  </body>
+</html>

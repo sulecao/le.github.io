@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>hook状态在哪保存 | 曹乐乐的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="曹乐乐的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.87056b20.css" as="style"><link rel="preload" href="/assets/js/app.c5540360.js" as="script"><link rel="preload" href="/assets/js/2.8cedc627.js" as="script"><link rel="preload" href="/assets/js/18.250128a4.js" as="script"><link rel="prefetch" href="/assets/js/10.6afd72ff.js"><link rel="prefetch" href="/assets/js/11.dcbc2078.js"><link rel="prefetch" href="/assets/js/12.63aa1da4.js"><link rel="prefetch" href="/assets/js/13.f6eba4b3.js"><link rel="prefetch" href="/assets/js/14.2eab2fda.js"><link rel="prefetch" href="/assets/js/15.59ddd13e.js"><link rel="prefetch" href="/assets/js/16.e5720ea3.js"><link rel="prefetch" href="/assets/js/17.7dd9c057.js"><link rel="prefetch" href="/assets/js/19.a7ed35f1.js"><link rel="prefetch" href="/assets/js/20.996fc976.js"><link rel="prefetch" href="/assets/js/3.0a51d753.js"><link rel="prefetch" href="/assets/js/4.a81c7b14.js"><link rel="prefetch" href="/assets/js/5.091ef1c6.js"><link rel="prefetch" href="/assets/js/6.6b7608b9.js"><link rel="prefetch" href="/assets/js/7.3313c665.js"><link rel="prefetch" href="/assets/js/8.6588b199.js"><link rel="prefetch" href="/assets/js/9.bc1a53ba.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.87056b20.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">曹乐乐的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react/1基础.html" class="sidebar-link">基础</a></li><li><a href="/blog/react/2类组件.html" class="sidebar-link">类组件</a></li><li><a href="/blog/react/3函数组件.html" class="sidebar-link">函数组件</a></li><li><a href="/blog/react/4Redux.html" class="sidebar-link">Redux</a></li><li><a href="/blog/react/5Router6与Router5.html" class="sidebar-link">Router6与Router5</a></li><li><a href="/blog/react/6React路由拦截.html" class="sidebar-link">React路由拦截</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React实现</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/react实现/1redux实现.html" class="sidebar-link">redux</a></li><li><a href="/blog/react实现/2react-redux实现.html" class="sidebar-link">react-redux</a></li><li><a href="/blog/react实现/3VDOM简单实现.html" class="sidebar-link">VDOM</a></li><li><a href="/blog/react实现/4React的fiber简单实现.html" class="sidebar-link">fiber</a></li><li><a href="/blog/react实现/5React的hook之useState简单实现.html" class="active sidebar-link">hook之useState</a></li><li><a href="/blog/react实现/6React的diff算法与渲染简单实现.html" class="sidebar-link">diff算法与渲染</a></li><li><a href="/blog/react实现/7React的scheduler介绍与简单实现.html" class="sidebar-link">scheduler</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="hook状态在哪保存"><a href="#hook状态在哪保存" class="header-anchor">#</a> hook状态在哪保存</h2> <p>函数组件的fiber上，有着memorizedState属性，并且以{ memorizedState: null, next: null }的链表形式保存着每一个hook函数状态。</p> <p>形如：</p> <div class="language-js extra-class"><pre class="language-js"><code>fiber <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">memorizedState</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">memorizedState</span><span class="token operator">:</span> value<span class="token punctuation">,</span>
+        <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">memorizedState</span><span class="token operator">:</span> value<span class="token punctuation">,</span>
+            <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="首次渲染和更新时的状态处理准备"><a href="#首次渲染和更新时的状态处理准备" class="header-anchor">#</a> 首次渲染和更新时的状态处理准备</h2> <p>fiber的alternate属性保存着上次渲染fiber</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span><span class="token parameter">fiberRoot</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fiberRoot<span class="token punctuation">.</span>alternate <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>fiberRoot <span class="token punctuation">}</span>
+    wipRoot <span class="token operator">=</span> fiberRoot
+    nextUnitOfWork <span class="token operator">=</span> fiberRoot
+    <span class="token function">scheduleCallback</span><span class="token punctuation">(</span>workLoop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>渲染到函数组件时,renderHook函数获取当前的函数fiber，初始化本轮渲染的属性</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 函数组件首次渲染或更新</span>
+<span class="token keyword">function</span> <span class="token function">updateFnFiber</span><span class="token punctuation">(</span><span class="token parameter">fiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">renderHooks</span><span class="token punctuation">(</span>fiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> type<span class="token punctuation">,</span> props <span class="token punctuation">}</span> <span class="token operator">=</span> fiber<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> children <span class="token operator">=</span> <span class="token function">type</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">reconcileChildren</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> children<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>初始化本轮渲染的属性</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 调用当前hook函数的函数fiber</span>
+<span class="token keyword">let</span> currentlyRenderingFiber <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token comment">// 尾hook节点</span>
+<span class="token keyword">let</span> workInProgressHook <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">renderHooks</span><span class="token punctuation">(</span><span class="token parameter">wip</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    currentlyRenderingFiber <span class="token operator">=</span> wip<span class="token punctuation">;</span>
+    currentlyRenderingFiber<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> 
+    workInProgressHook <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="usestate方法实现"><a href="#usestate方法实现" class="header-anchor">#</a> useState方法实现</h2> <p>react组件函数的执行会调用useState</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter">initialState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取到当前 useState对应的hook链表节点</span>
+    <span class="token keyword">const</span> hook <span class="token operator">=</span> <span class="token function">updateWorkProgressHook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentlyRenderingFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 若是初次渲染节点，保存初始值</span>
+        hook<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> initialState<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//  dispatch方法因为闭包，引用着对应的hook，修改了hook状态值，开始新一轮更新。</span>
+    <span class="token comment">//</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">dispatch</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        hook<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> state<span class="token punctuation">;</span>
+        <span class="token comment">//从函数组件开始往下协调更新</span>
+        <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span>currentlyRenderingFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>hook<span class="token punctuation">.</span>memorizedState<span class="token punctuation">,</span> dispatch<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="updateworkprogresshook函数"><a href="#updateworkprogresshook函数" class="header-anchor">#</a> updateWorkProgressHook函数</h2> <p>updateWorkProgressHook函数处理和获取当前hook对应状态</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//获取当前hook , 也是构建fibe上hook链表的过程</span>
+<span class="token keyword">function</span> <span class="token function">updateWorkProgressHook</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> hook <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token comment">//  第一次渲染时函数fiber上没有alternate</span>
+    <span class="token comment">//  更新时alternate上存在最新的hook状态</span>
+    <span class="token keyword">const</span> current <span class="token operator">=</span> currentlyRenderingFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>current<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 更新</span>
+        <span class="token comment">// fiber的memorizedState指向新一轮的hook链表</span>
+        currentlyRenderingFiber<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> current<span class="token punctuation">.</span>memorizedState<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgressHook<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//有尾hook节点,新的hook为尾hook节点的下一个</span>
+            hook <span class="token operator">=</span> workInProgressHook <span class="token operator">=</span> workInProgressHook<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+           <span class="token comment">//没尾hook节点,获取第一个hook节点，current.memorizedState指向第一个节点</span>
+            hook <span class="token operator">=</span> workInProgressHook <span class="token operator">=</span> current<span class="token punctuation">.</span>memorizedState<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 初次渲染，返回空hook</span>
+        hook <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">memorizedState</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token keyword">null</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        currentHook <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>workInProgressHook<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//有尾hook节点,新的hook加入链表末尾</span>
+            workInProgressHook <span class="token operator">=</span> workInProgressHook<span class="token punctuation">.</span>next <span class="token operator">=</span> hook<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">//没有尾hook节点，新的hook为hook链表开端</span>
+            workInProgressHook <span class="token operator">=</span> currentlyRenderingFiber<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> hook<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> hook<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="usereducer方法实现"><a href="#usereducer方法实现" class="header-anchor">#</a> useReducer方法实现</h2> <p>和useState类似，只是dispatch方法里，每次新的值是用reducer函数的返回</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useReducer</span><span class="token punctuation">(</span><span class="token parameter">reducer<span class="token punctuation">,</span> initialState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> hook <span class="token operator">=</span> <span class="token function">updateWorkProgressHook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentlyRenderingFiber<span class="token punctuation">.</span>alternate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        hook<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> initialState<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//  定义一个dispatch，调用时执行reducer方法获取计算后的状态值</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">dispatch</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">action</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        hook<span class="token punctuation">.</span>memorizedState <span class="token operator">=</span> <span class="token function">reducer</span><span class="token punctuation">(</span>hook<span class="token punctuation">.</span>memorizedState<span class="token punctuation">,</span> action<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span>currentlyRenderingFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>hook<span class="token punctuation">.</span>memorizedState<span class="token punctuation">,</span> dispatch<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/react实现/4React的fiber简单实现.html" class="prev">
+        fiber
+      </a></span> <span class="next"><a href="/blog/react实现/6React的diff算法与渲染简单实现.html">
+        diff算法与渲染
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c5540360.js" defer></script><script src="/assets/js/2.8cedc627.js" defer></script><script src="/assets/js/18.250128a4.js" defer></script>
+  </body>
+</html>
