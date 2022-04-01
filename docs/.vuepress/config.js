@@ -7,12 +7,25 @@ module.exports = {
       {
         text: '目录',
         items: [
+          { text: '算法', link: '/blog/算法/0算法题' },
           { text: 'React', link: '/blog/react/1基础' },
-          // { text: 'React实现', link: '/blog/react实现/1redux实现' },
+          { text: 'React实现', link: '/blog/react实现/1redux实现' },
         ],
       },
     ],
     sidebar: [
+      {
+        title: '算法',
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 0, // 可选的, 默认值是 1
+        children: [
+          ['/blog/算法/0算法题', '算法题'],
+          ['/blog/算法/1栈', '栈'],
+          ['/blog/算法/2队列', '队列'],
+          ['/blog/算法/3链表', '链表'],
+          ['/blog/算法/4BitMap', 'BitMap'],
+        ],
+      },
       {
         title: 'React', // 必要的
         collapsable: false, // 可选的, 默认值是 true,
