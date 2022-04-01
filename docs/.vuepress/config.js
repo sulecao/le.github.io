@@ -9,6 +9,7 @@ module.exports = {
         items: [
           { text: '算法', link: '/blog/算法/0算法题' },
           { text: 'javascript', link: '/blog/js/1基础类型' },
+          { text: 'typescript', link: '/blog/ts/1安装和编译' },
           { text: 'React', link: '/blog/react/1基础' },
           { text: 'React实现', link: '/blog/react实现/1redux实现' },
         ],
@@ -17,7 +18,6 @@ module.exports = {
     sidebar: [
       {
         title: '算法',
-        collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/算法/0算法题', '算法题'],
@@ -29,7 +29,6 @@ module.exports = {
       },
       {
         title: 'javascript',
-        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/js/1基础类型', '基础类型'],
@@ -46,8 +45,20 @@ module.exports = {
         ],
       },
       {
+        title: 'typescript',
+        sidebarDepth: 0, // 可选的, 默认值是 1
+        children: [
+          ['/blog/ts/1安装和编译', '安装和编译'],
+          ['/blog/ts/2基本类型', '基础类型'],
+          ['/blog/ts/3接口和高级类型', '接口和高级类型'],
+          ['/blog/ts/4函数', '函数'],
+          ['/blog/ts/5类', '类'],
+          ['/blog/ts/6泛型', '泛型'],
+          ['/blog/ts/7装饰器', '装饰器'],
+        ],
+      },
+      {
         title: 'React', // 必要的
-        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/react/1基础', '基础'],
@@ -60,7 +71,6 @@ module.exports = {
       },
       {
         title: 'React实现',
-        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/react实现/1redux实现', 'redux'],
