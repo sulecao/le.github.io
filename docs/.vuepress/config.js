@@ -8,6 +8,7 @@ module.exports = {
         text: '目录',
         items: [
           { text: '算法', link: '/blog/算法/0算法题' },
+          { text: 'javascript', link: '/blog/js/1基础类型' },
           { text: 'React', link: '/blog/react/1基础' },
           { text: 'React实现', link: '/blog/react实现/1redux实现' },
         ],
@@ -27,8 +28,26 @@ module.exports = {
         ],
       },
       {
+        title: 'javascript',
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 0, // 可选的, 默认值是 1
+        children: [
+          ['/blog/js/1基础类型', '基础类型'],
+          ['/blog/js/2数组和字符串', '数组和字符串'],
+          ['/blog/js/3对象与类', '对象与类'],
+          ['/blog/js/4函数', '函数'],
+          ['/blog/js/5函数式编程', '函数式编程'],
+          ['/blog/js/6异步', '异步'],
+          ['/blog/js/7实现Promise', '实现Promise'],
+          ['/blog/js/8正则表达式', '正则表达式'],
+          ['/blog/js/9数据响应式', '数据响应式'],
+          ['/blog/js/10设计模式', '设计模式'],
+          ['/blog/js/11其它', '其它'],
+        ],
+      },
+      {
         title: 'React', // 必要的
-        collapsable: false, // 可选的, 默认值是 true,
+        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/react/1基础', '基础'],
@@ -41,7 +60,7 @@ module.exports = {
       },
       {
         title: 'React实现',
-        collapsable: false, // 可选的, 默认值是 true,
+        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/blog/react实现/1redux实现', 'redux'],
