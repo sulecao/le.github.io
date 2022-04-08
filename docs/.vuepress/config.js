@@ -12,6 +12,9 @@ module.exports = {
           { text: 'typescript', link: '/blog/ts/1安装和编译' },
           { text: 'React', link: '/blog/react/1基础' },
           { text: 'React实现', link: '/blog/react实现/1redux实现' },
+          { text: 'Node', link: '/blog/node/1Node入门' },
+          { text: '工程化', link: '/blog/工程化/1webpack的常用loader和plugin' },
+          { text: '通信', link: '/blog/通信/1AJAX' },
         ],
       },
     ],
@@ -25,6 +28,10 @@ module.exports = {
           ['/blog/算法/2队列', '队列'],
           ['/blog/算法/3链表', '链表'],
           ['/blog/算法/4BitMap', 'BitMap'],
+          ['/blog/算法/5二叉树', '二叉树'],
+          ['/blog/算法/6堆', '堆'],
+          ['/blog/算法/7Union-Find并查集', '并查集'],
+          ['/blog/算法/8排序', '排序'],
         ],
       },
       {
@@ -82,6 +89,39 @@ module.exports = {
           ['/blog/react实现/7React的scheduler介绍与简单实现', 'scheduler'],
         ],
       },
+      {
+        title: 'Node',
+        sidebarDepth: 0, // 可选的, 默认值是 1
+        children: [
+          ['/blog/node/1Node入门', 'Node入门'],
+          ['/blog/node/2KOA', 'KOA'],
+          ['/blog/node/3node里使用MySQL', 'node里使用MySQL'],
+        ],
+      },
+      {
+        title: '工程化',
+        sidebarDepth: 0, // 可选的, 默认值是 1
+        children: [
+          [
+            '/blog/工程化/1webpack的常用loader和plugin',
+            'webpack的常用loader和plugin',
+          ],
+          ['/blog/工程化/2webpack配置', 'webpack配置'],
+          ['/blog/工程化/3用Node.js构建CLI工具', '用Node.js构建CLI工具'],
+        ],
+      },
+      {
+       title: '通信',
+       sidebarDepth: 0, // 可选的, 默认值是 1
+       children: [
+         [
+           '/blog/通信/1AJAX',
+           'AJAX',
+         ],
+         ['/blog/通信/2即时通信', '即时通信'],
+         ['/blog/通信/3http', 'http'],
+       ],
+     },
     ],
     subSidebar: 'auto',
     smoothScroll: true,
