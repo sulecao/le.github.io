@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TypeScript环境搭建与编译执行 | 曹乐乐的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="曹乐乐的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.aebd14a2.css" as="style"><link rel="preload" href="/assets/js/app.246b0c2d.js" as="script"><link rel="preload" href="/assets/js/2.3b32e482.js" as="script"><link rel="preload" href="/assets/js/36.a7a30820.js" as="script"><link rel="prefetch" href="/assets/js/10.90a3b0fe.js"><link rel="prefetch" href="/assets/js/11.c4b562f8.js"><link rel="prefetch" href="/assets/js/12.d88d4c7f.js"><link rel="prefetch" href="/assets/js/13.c324d3eb.js"><link rel="prefetch" href="/assets/js/14.9d5da77a.js"><link rel="prefetch" href="/assets/js/15.602a055b.js"><link rel="prefetch" href="/assets/js/16.1959014f.js"><link rel="prefetch" href="/assets/js/17.02375a9d.js"><link rel="prefetch" href="/assets/js/18.0f9dabf7.js"><link rel="prefetch" href="/assets/js/19.ab4ada65.js"><link rel="prefetch" href="/assets/js/20.a9f8b98a.js"><link rel="prefetch" href="/assets/js/21.783d7581.js"><link rel="prefetch" href="/assets/js/22.da84abfb.js"><link rel="prefetch" href="/assets/js/23.a28391fd.js"><link rel="prefetch" href="/assets/js/24.621559e1.js"><link rel="prefetch" href="/assets/js/25.57d413e2.js"><link rel="prefetch" href="/assets/js/26.a2c3724e.js"><link rel="prefetch" href="/assets/js/27.27465f0d.js"><link rel="prefetch" href="/assets/js/28.8b497ed3.js"><link rel="prefetch" href="/assets/js/29.66f437ec.js"><link rel="prefetch" href="/assets/js/3.15174197.js"><link rel="prefetch" href="/assets/js/30.fb17f34a.js"><link rel="prefetch" href="/assets/js/31.dcef3616.js"><link rel="prefetch" href="/assets/js/32.4c4bcff0.js"><link rel="prefetch" href="/assets/js/33.e63e2c05.js"><link rel="prefetch" href="/assets/js/34.293bddf4.js"><link rel="prefetch" href="/assets/js/35.6c6b628a.js"><link rel="prefetch" href="/assets/js/37.3b7eb019.js"><link rel="prefetch" href="/assets/js/38.75db42f4.js"><link rel="prefetch" href="/assets/js/39.1e61b706.js"><link rel="prefetch" href="/assets/js/4.4d6c5a85.js"><link rel="prefetch" href="/assets/js/40.2009761f.js"><link rel="prefetch" href="/assets/js/41.e803a0d3.js"><link rel="prefetch" href="/assets/js/42.1b8582a0.js"><link rel="prefetch" href="/assets/js/43.f7cac3ed.js"><link rel="prefetch" href="/assets/js/44.7a6d3d12.js"><link rel="prefetch" href="/assets/js/45.1ac13dc2.js"><link rel="prefetch" href="/assets/js/46.cef30784.js"><link rel="prefetch" href="/assets/js/47.db887565.js"><link rel="prefetch" href="/assets/js/48.ae5adddb.js"><link rel="prefetch" href="/assets/js/49.a7d54a3c.js"><link rel="prefetch" href="/assets/js/5.e9d17e52.js"><link rel="prefetch" href="/assets/js/50.9226fe57.js"><link rel="prefetch" href="/assets/js/51.1c868ddd.js"><link rel="prefetch" href="/assets/js/52.ccf6848d.js"><link rel="prefetch" href="/assets/js/53.eafa7ea1.js"><link rel="prefetch" href="/assets/js/54.a470ae7e.js"><link rel="prefetch" href="/assets/js/55.0737ff43.js"><link rel="prefetch" href="/assets/js/56.8a7b3467.js"><link rel="prefetch" href="/assets/js/57.74d590f7.js"><link rel="prefetch" href="/assets/js/6.abcde65a.js"><link rel="prefetch" href="/assets/js/7.8830fdf1.js"><link rel="prefetch" href="/assets/js/8.63686a92.js"><link rel="prefetch" href="/assets/js/9.ab320b11.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aebd14a2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">曹乐乐的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/算法/0算法题.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1基础类型.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ts/1安装和编译.html" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react实现/1redux实现.html" class="nav-link">
+  React实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/node/1Node入门.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/工程化/1webpack的常用loader和plugin.html" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/通信/1AJAX.html" class="nav-link">
+  通信
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="留言" class="dropdown-title"><span class="title">留言</span> <span class="arrow down"></span></button> <button type="button" aria-label="留言" class="mobile-dropdown-title"><span class="title">留言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/message/message.html" class="nav-link">
+  留言
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/算法/0算法题.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1基础类型.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ts/1安装和编译.html" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react实现/1redux实现.html" class="nav-link">
+  React实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/node/1Node入门.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/工程化/1webpack的常用loader和plugin.html" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/通信/1AJAX.html" class="nav-link">
+  通信
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="留言" class="dropdown-title"><span class="title">留言</span> <span class="arrow down"></span></button> <button type="button" aria-label="留言" class="mobile-dropdown-title"><span class="title">留言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/message/message.html" class="nav-link">
+  留言
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>typescript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/ts/1安装和编译.html" class="active sidebar-link">安装和编译</a></li><li><a href="/blog/ts/2基本类型.html" class="sidebar-link">基础类型</a></li><li><a href="/blog/ts/3接口和高级类型.html" class="sidebar-link">接口和高级类型</a></li><li><a href="/blog/ts/4函数.html" class="sidebar-link">函数</a></li><li><a href="/blog/ts/5类.html" class="sidebar-link">类</a></li><li><a href="/blog/ts/6泛型.html" class="sidebar-link">泛型</a></li><li><a href="/blog/ts/7装饰器.html" class="sidebar-link">装饰器</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React实现</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工程化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>通信</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="typescript环境搭建与编译执行"><a href="#typescript环境搭建与编译执行" class="header-anchor">#</a> TypeScript环境搭建与编译执行</h2> <h5 id="typescript-编写的程序并不能直接通过浏览器运行-需要先通过-typescript-编译器把代码编译成-javascript-代码"><a href="#typescript-编写的程序并不能直接通过浏览器运行-需要先通过-typescript-编译器把代码编译成-javascript-代码" class="header-anchor">#</a> TypeScript 编写的程序并不能直接通过浏览器运行，需要先通过 TypeScript 编译器把代码编译成 JavaScript 代码</h5> <h5 id="typescript-的编译器是基于-node-js-的-需要先安装-node-js"><a href="#typescript-的编译器是基于-node-js-的-需要先安装-node-js" class="header-anchor">#</a> TypeScript 的编译器是基于 Node.js 的，需要先安装 Node.js</h5> <p>1.安装Node.js</p> <p>2.安装 TypeScript编译器</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i -g typescript 
+//查看当前 tsc 编译器版本 
+tsc -v
+</code></pre></div><p>3.编写代码</p> <p>TypeScript 的文件的后缀为 .ts</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//index.ts</span>
+<span class="token keyword">let</span> <span class="token literal-property property">text</span><span class="token operator">:</span> string <span class="token operator">=</span> <span class="token string">'TypeScript'</span>
+</code></pre></div><p>4.编译</p> <p>当前目录下执行指令</p> <div class="language-bash extra-class"><pre class="language-bash"><code>tsc ./index.ts
+</code></pre></div><p>默认情况下会在当前文件所在目录下生成同名的 js 文件</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//index.js</span>
+<span class="token keyword">var</span> text <span class="token operator">=</span> <span class="token string">'TypeScript'</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="编译指令选项"><a href="#编译指令选项" class="header-anchor">#</a> 编译指令选项</h2> <p><strong>--outDir</strong></p> <p>指定编译文件输出目录</p> <p><strong>--target</strong></p> <p>指定编译的代码版本目标，默认为 ES3</p> <p><strong>--watch</strong></p> <p>在监听模式下运行，当文件发生改变的时候自动编译</p> <div class="language-bash extra-class"><pre class="language-bash"><code>//编译当前路径文件
+tsc ./src/helloKaiKeBa.ts 
+//编译当前路径文件输出到dist目录
+tsc --outDir ./dist ./src/helloKaiKeBa.ts 
+//编译当前路径文件输出到dist目录，js代码版本为ES6
+tsc --outDir ./dist --target ES6 ./src/helloKaiKeBa.ts 
+//编译当前路径文件输出到dist目录，js代码版本为ES6，并开启监听模式，后续在ts文件写代码会自动编译。
+tsc --outDir ./dist --target ES6 --watch ./src/helloKaiKeBa.ts
+</code></pre></div><h2 id="编译配置文件tsconfig-json"><a href="#编译配置文件tsconfig-json" class="header-anchor">#</a> 编译配置文件tsconfig.json</h2> <p>把编译的一些选项保存在一个指定的 json 文件中，</p> <p>默认情况下 tsc 命令运行的时候会自动去加载运行命令所在的目录下的 tsconfig.json 文件</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">//tsconfig.json</span>
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;../dist&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es5&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;watch&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;../src/**/*&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//命令行指令</span>
+tsc 
+</code></pre></div><p>也可以使用 --project 或 -p 指定配置文件目录或某个具体的配置文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code>tsc -p ./configs 
+tsc -p ./configs/ts.json
+</code></pre></div><h2 id="语法转换"><a href="#语法转换" class="header-anchor">#</a> 语法转换</h2> <p>TypeScript 在编译过程中只会转换语法（比如扩展运算符，箭头函数等语法进行转换，对于API 是不会进行转换的（如promise），而是引入一些扩展库进行处理的。</p> <p>如果我们的代码中使用了 target 中没有的 API ，则需要手动进行引入，默认情况下 TypeScript 会根据target 载入核心的类型库</p> <p>target 为 es5 时: [&quot;dom&quot;, &quot;es5&quot;, &quot;scripthost&quot;]</p> <p>target 为 es6 时: [&quot;dom&quot;, &quot;es6&quot;, &quot;dom.iterable&quot;, &quot;scripthost&quot;]</p> <p>如果代码中使用了这些默认载入库以外的代码，则可以通过 lib 选项来进行设置</p> <p>https://www.typescriptlang.org/tsconfig/#lib</p> <div class="language-js extra-class"><pre class="language-js"><code>Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token string">'zmouse'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">z</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//属性“assign”在类型“ObjectConstructor”上不存在。是否需要更改目标库? 请尝试将 “lib” 编译器选项更改为“es2015”或更高版本。</span>
+</code></pre></div><p>//解决方案，配置项里，lib项增加es6库</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es5&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lib&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;es6&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;dom&quot;</span><span class="token punctuation">]</span><span class="token comment">//lib项增加es6库</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;include&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;./src/**/*&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/js/11其它.html" class="prev">
+        其它
+      </a></span> <span class="next"><a href="/blog/ts/2基本类型.html">
+        基础类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.246b0c2d.js" defer></script><script src="/assets/js/2.3b32e482.js" defer></script><script src="/assets/js/36.a7a30820.js" defer></script>
+  </body>
+</html>

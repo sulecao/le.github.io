@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Union-Find并查集 | 曹乐乐的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="曹乐乐的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.aebd14a2.css" as="style"><link rel="preload" href="/assets/js/app.246b0c2d.js" as="script"><link rel="preload" href="/assets/js/2.3b32e482.js" as="script"><link rel="preload" href="/assets/js/53.eafa7ea1.js" as="script"><link rel="prefetch" href="/assets/js/10.90a3b0fe.js"><link rel="prefetch" href="/assets/js/11.c4b562f8.js"><link rel="prefetch" href="/assets/js/12.d88d4c7f.js"><link rel="prefetch" href="/assets/js/13.c324d3eb.js"><link rel="prefetch" href="/assets/js/14.9d5da77a.js"><link rel="prefetch" href="/assets/js/15.602a055b.js"><link rel="prefetch" href="/assets/js/16.1959014f.js"><link rel="prefetch" href="/assets/js/17.02375a9d.js"><link rel="prefetch" href="/assets/js/18.0f9dabf7.js"><link rel="prefetch" href="/assets/js/19.ab4ada65.js"><link rel="prefetch" href="/assets/js/20.a9f8b98a.js"><link rel="prefetch" href="/assets/js/21.783d7581.js"><link rel="prefetch" href="/assets/js/22.da84abfb.js"><link rel="prefetch" href="/assets/js/23.a28391fd.js"><link rel="prefetch" href="/assets/js/24.621559e1.js"><link rel="prefetch" href="/assets/js/25.57d413e2.js"><link rel="prefetch" href="/assets/js/26.a2c3724e.js"><link rel="prefetch" href="/assets/js/27.27465f0d.js"><link rel="prefetch" href="/assets/js/28.8b497ed3.js"><link rel="prefetch" href="/assets/js/29.66f437ec.js"><link rel="prefetch" href="/assets/js/3.15174197.js"><link rel="prefetch" href="/assets/js/30.fb17f34a.js"><link rel="prefetch" href="/assets/js/31.dcef3616.js"><link rel="prefetch" href="/assets/js/32.4c4bcff0.js"><link rel="prefetch" href="/assets/js/33.e63e2c05.js"><link rel="prefetch" href="/assets/js/34.293bddf4.js"><link rel="prefetch" href="/assets/js/35.6c6b628a.js"><link rel="prefetch" href="/assets/js/36.a7a30820.js"><link rel="prefetch" href="/assets/js/37.3b7eb019.js"><link rel="prefetch" href="/assets/js/38.75db42f4.js"><link rel="prefetch" href="/assets/js/39.1e61b706.js"><link rel="prefetch" href="/assets/js/4.4d6c5a85.js"><link rel="prefetch" href="/assets/js/40.2009761f.js"><link rel="prefetch" href="/assets/js/41.e803a0d3.js"><link rel="prefetch" href="/assets/js/42.1b8582a0.js"><link rel="prefetch" href="/assets/js/43.f7cac3ed.js"><link rel="prefetch" href="/assets/js/44.7a6d3d12.js"><link rel="prefetch" href="/assets/js/45.1ac13dc2.js"><link rel="prefetch" href="/assets/js/46.cef30784.js"><link rel="prefetch" href="/assets/js/47.db887565.js"><link rel="prefetch" href="/assets/js/48.ae5adddb.js"><link rel="prefetch" href="/assets/js/49.a7d54a3c.js"><link rel="prefetch" href="/assets/js/5.e9d17e52.js"><link rel="prefetch" href="/assets/js/50.9226fe57.js"><link rel="prefetch" href="/assets/js/51.1c868ddd.js"><link rel="prefetch" href="/assets/js/52.ccf6848d.js"><link rel="prefetch" href="/assets/js/54.a470ae7e.js"><link rel="prefetch" href="/assets/js/55.0737ff43.js"><link rel="prefetch" href="/assets/js/56.8a7b3467.js"><link rel="prefetch" href="/assets/js/57.74d590f7.js"><link rel="prefetch" href="/assets/js/6.abcde65a.js"><link rel="prefetch" href="/assets/js/7.8830fdf1.js"><link rel="prefetch" href="/assets/js/8.63686a92.js"><link rel="prefetch" href="/assets/js/9.ab320b11.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aebd14a2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">曹乐乐的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/算法/0算法题.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1基础类型.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ts/1安装和编译.html" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react实现/1redux实现.html" class="nav-link">
+  React实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/node/1Node入门.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/工程化/1webpack的常用loader和plugin.html" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/通信/1AJAX.html" class="nav-link">
+  通信
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="留言" class="dropdown-title"><span class="title">留言</span> <span class="arrow down"></span></button> <button type="button" aria-label="留言" class="mobile-dropdown-title"><span class="title">留言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/message/message.html" class="nav-link">
+  留言
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="目录" class="dropdown-title"><span class="title">目录</span> <span class="arrow down"></span></button> <button type="button" aria-label="目录" class="mobile-dropdown-title"><span class="title">目录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/算法/0算法题.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1基础类型.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/ts/1安装和编译.html" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/1基础.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react实现/1redux实现.html" class="nav-link">
+  React实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/node/1Node入门.html" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/blog/工程化/1webpack的常用loader和plugin.html" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/通信/1AJAX.html" class="nav-link">
+  通信
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="留言" class="dropdown-title"><span class="title">留言</span> <span class="arrow down"></span></button> <button type="button" aria-label="留言" class="mobile-dropdown-title"><span class="title">留言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/message/message.html" class="nav-link">
+  留言
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>算法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/算法/0算法题.html" class="sidebar-link">算法题</a></li><li><a href="/blog/算法/1栈.html" class="sidebar-link">栈</a></li><li><a href="/blog/算法/2队列.html" class="sidebar-link">队列</a></li><li><a href="/blog/算法/3链表.html" class="sidebar-link">链表</a></li><li><a href="/blog/算法/4BitMap.html" class="sidebar-link">BitMap</a></li><li><a href="/blog/算法/5二叉树.html" class="sidebar-link">二叉树</a></li><li><a href="/blog/算法/6堆.html" class="sidebar-link">堆</a></li><li><a href="/blog/算法/7Union-Find并查集.html" class="active sidebar-link">并查集</a></li><li><a href="/blog/算法/8排序.html" class="sidebar-link">排序</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React实现</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工程化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>通信</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="union-find并查集"><a href="#union-find并查集" class="header-anchor">#</a> Union-Find并查集</h1> <h2 id="并查集的作用"><a href="#并查集的作用" class="header-anchor">#</a> 并查集的作用</h2> <p>并查集主要用来解决集合类的问题，集合间的连通性问题</p> <h2 id="并查集的实现"><a href="#并查集的实现" class="header-anchor">#</a> 并查集的实现</h2> <p>主要有两个操作</p> <p>find：查询节点所在的集合</p> <p>merge：合并两个节点所在的集合</p> <h3 id="方案a-quick-find"><a href="#方案a-quick-find" class="header-anchor">#</a> 方案A:quick find</h3> <p>用数组存储每个索引对应的集合，数组的值就是集合的名称代表。</p> <p>时间复杂度</p> <p>查找：O(1)</p> <p>合并：O(n)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Unionfind</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token comment">//初始化每个节点的值为自己，每个不同的值都是一个集合</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 查找所在集合</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">find</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 合并集合</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">merge</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> UnionX <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>x<span class="token punctuation">]</span>
+    <span class="token keyword">let</span> UnionY <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>y<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>UnionX <span class="token operator">==</span> UnionY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 数组内：集合为X的节点都变成Y</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> UnionX <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> UnionY<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="方案b-quick-union"><a href="#方案b-quick-union" class="header-anchor">#</a> 方案B:quick union</h3> <p>将各个集合抽象成倒着的树，每个儿子节点指向父亲节点，根节点指向自己</p> <p>即根节点<code>data[i] = i</code>，儿子节点<code>data[i] = fatherIndex</code></p> <p><img src="https://upload-images.jianshu.io/upload_images/17012856-cebfd0e32a53548d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Unionfind</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token comment">//倒着的树，儿子指向父亲。根节点指向自己</span>
+    <span class="token comment">//初始时都是独立的树，都是根节点，都指向自己</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 查找所在集合，需要一直查，直到指向自己</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">find</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> root <span class="token operator">=</span> i
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>root<span class="token punctuation">]</span> <span class="token operator">!==</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        root <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> root
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 合并集合</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">merge</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> UnionX <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> UnionY <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>UnionX <span class="token operator">==</span> UnionY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 集合X的root指向y集合根节点，所有的节点都挂到y节点上了，y节点的根节点称为两个集合的根节点</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> UnionY
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="方案b的优化"><a href="#方案b的优化" class="header-anchor">#</a> 方案B的优化</h3> <p>一：带权合并</p> <p>在执行merge时，上个实现是无规则的将两个树合并成一个。</p> <p>我们可以优化：挂载时将少的节点树挂到多的节点树上，这样合并后较少的节点多个一个父级。（另一种思路是将树高低的合入树高高的）</p> <p>二：路径压缩</p> <p>树的合并极端情况下会合并成为一个链表，查找根节点遍历次数很多，
+可以在每次find操作时，直接将遇到的节点都指向根节点，减少后面查找根节点的遍历次数。</p> <p>路径压缩示意图：</p> <p><img src="https://upload-images.jianshu.io/upload_images/17012856-f9e05640df1c95e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Unionfind</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+    <span class="token comment">// 增加一个以i为根节点的树的节点数量，初始都为1</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 查找所在集合，需要一直查，直到指向自己</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">find</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> root <span class="token operator">=</span> i
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>root<span class="token punctuation">]</span> <span class="token operator">!==</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        root <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>root<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//路径压缩：将遍历时遇到的各层节点都直接指向根节点</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> t <span class="token operator">=</span> i
+        i <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>t<span class="token punctuation">]</span> <span class="token operator">=</span> root
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> root
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 合并集合</span>
+<span class="token class-name">Unionfind</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">merge</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> UnionX <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> UnionY <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>UnionX <span class="token operator">==</span> UnionY<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 带权合并：</span>
+    <span class="token comment">// 挂载时将少的节点树挂到多的节点树上，这样较少的节点多一个父级</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>UnionX<span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>UnionY<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>UnionX<span class="token punctuation">]</span> <span class="token operator">=</span> UnionY
+        <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>y<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>UnionY<span class="token punctuation">]</span> <span class="token operator">=</span> UnionX
+        <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>treeSize<span class="token punctuation">[</span>y<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/算法/6堆.html" class="prev">
+        堆
+      </a></span> <span class="next"><a href="/blog/算法/8排序.html">
+        排序
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.246b0c2d.js" defer></script><script src="/assets/js/2.3b32e482.js" defer></script><script src="/assets/js/53.eafa7ea1.js" defer></script>
+  </body>
+</html>
