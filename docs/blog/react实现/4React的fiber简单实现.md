@@ -1,7 +1,3 @@
-下方链接的文章实现了将vdom直接渲染到页面上的逻辑。
-
-https://www.jianshu.com/p/87620bce827d
-
 #### react后来又引入了fiber
 
 #### fiber是在vdom的基础上的扩展，增加了一些关联属性，方便更新的时候查找下一个工作单元。

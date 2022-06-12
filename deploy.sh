@@ -10,6 +10,6 @@ cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:sulecao/sulecao.github.io.git master
+# git push -f git@github.com:sulecao/sulecao.github.io.git master
 git push -f git@gitee.com:caolele/caolele.git master
 cd -

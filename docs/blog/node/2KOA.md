@@ -397,7 +397,7 @@ a - end
 
 ### 洋葱模型
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-c4c53280c97a0ea1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/koa.jpg)
 
 ## Context 对象
 

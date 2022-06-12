@@ -20,7 +20,7 @@ vue add <plugin-name>
 
 ##### **参数**
 
-参数是配合着命令调用传入的数据，类似函数参数，如下 <project-name>  app1就是参数：
+参数是配合着命令调用传入的数据，类似函数参数，如下 ```<project-name>```  app1就是参数：
 
 ```bash
 vue create app1

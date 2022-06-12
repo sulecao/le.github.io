@@ -8,7 +8,7 @@
 可以通过 右击我的电脑-->管理-->服务和应用程序-->服务,查看mysql是否启动
 
 安装完成后自动启动
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-daf86ceeeb9654d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql1.jpg)
 
 ### MySQL图形化操作界面下载
 
@@ -16,18 +16,18 @@
 
 安装成功后设置对应的端口并输入密码进入数据库
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-7345b6180db3d938.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql2.jpg)
 
 创建一个新的数据库，在schemas页右击，选择create选项
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-4fa0d0aaa8e2670a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql3.jpg)
 
 设置数据库名称为mydb，并且设置字符编码
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-488cbd7b5012e6ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql4.jpg)
 
 新建一张表名为users，并设置对应的字段名
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-c7fdbb968fc93482.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql5.jpg)
 
 ```sql
 //图形化的操作对应的sql语句
@@ -39,7 +39,7 @@ CREATE TABLE `mydb`.`users` (
 
 可以通过输入sql语句查看表内的数据，输入完语句按黄色小闪电执行
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-c848e175dff216c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](../../assets/mysql6.jpg)
 
 ## mysql基本概念介绍
 

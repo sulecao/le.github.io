@@ -56,7 +56,7 @@ Unionfind.prototype.merge = function (x, y) {
 
 即根节点```data[i] = i```，儿子节点```data[i] = fatherIndex```
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-cebfd0e32a53548d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](../../assets/bingchaji1.jpg)
 
 ```js
 function Unionfind(n) {
@@ -104,7 +104,7 @@ Unionfind.prototype.merge = function (x, y) {
 
 路径压缩示意图：
 
-![image.png](https://upload-images.jianshu.io/upload_images/17012856-f9e05640df1c95e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](../../assets/bingchaji2.jpg)
 
 ```js
 function Unionfind(n) {

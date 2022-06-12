@@ -17,6 +17,12 @@ module.exports = {
           { text: '通信', link: '/blog/通信/1AJAX' },
         ],
       },
+      {
+       text: '留言',
+       items: [
+        { text: '留言', link: '/blog/message/message' },
+       ]
+      }
     ],
     sidebar: [
       {
@@ -127,5 +133,29 @@ module.exports = {
     smoothScroll: true,
     displayAllHeaders: true, // 默认值：false
   },
-  plugins: ['@vuepress/back-to-top', '@vuepress/active-header-links'],
+  plugins: ['@vuepress/back-to-top', '@vuepress/active-header-links',  
+    [
+   '@vssue/vuepress-plugin-vssue', {
+     // 设置 `platform` 而不是 `api`
+     platform: 'github',
+     // 其他的 Vssue 配置
+     owner: 'sulecao',
+     repo: 'sulecao.github.io',
+     clientId: '03c35413c67fa3115490',
+     clientSecret: '2608e459469fcd18b4249fd5c5293d4211b79f8c',
+   }
+  ],
+  // [
+  //  '@vssue/vuepress-plugin-vssue', {
+  //    // 设置 `platform` 而不是 `api`
+  //    platform: 'gitee',
+  //    // 其他的 Vssue 配置
+  //    owner: 'caolele',
+  //    repo: 'caolele',
+  //    clientId: '44885be432a464f86b9c4575de3301d6f14dedd69bb49affa2200e2f9f1d0b35',
+  //    clientSecret: '40e0b0b348fb6379773b18b2fb64812601880a9e8d20aaf6ca6742bcf1c34b7d',
+  //  }
+  // ],
+
+],
 };
